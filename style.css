@@ -1,8 +1,10 @@
-:root {
-    --h:150px;
-    --c:rgb(9, 212, 87);
-    --h0:75px;
+/*
+@media not|only mediatypes and (expressions) {
+    CSS-Code
 }
+
+mediatypes ( all screen print )
+*/
 
 * {
     margin: 0;
@@ -12,17 +14,27 @@
     font-family: Arial, Helvetica, sans-serif;
     /*border: 1px solid red;*/
 }
+/*
+@media not|only mediatypes and (expressions) {
+    CSS-Code
+}*/
+
+:root {
+    --h:150px;
+    --c:rgb(9, 212, 87);
+    --h0:75px;
+}
 
 a {
     color: #000;
     text-decoration-line: none;
 }
 
-/*haeder*/
 header {
     background-color: var(--c);
     height: var(--h);
 }
+
 .logo {
     height: var(--h);
     line-height: var(--h);
@@ -31,20 +43,21 @@ header {
     margin-right: 30px;
     margin-top: 0px;
 }
-
-/*nav bar*/
+ 
 ul {
     list-style-type: none;
     display: flex;
 	flex-flow: row wrap;
 }
+
 li a {
     display: block;
     font-size: 40px;
     padding: 15px 20px;
 }
 
-/*main*/
+/*
+ 
 .prim {
     height: 1000px;
     background-image: url('image/bg.png');
@@ -57,6 +70,7 @@ li a {
     font-size: 60px;
     margin: 200px auto 0px auto;
 }
+
 details {
 	height: var(--h0);
 	line-height: var(--h0);
@@ -68,23 +82,26 @@ details {
     background-color: rgb(32, 32, 32);
     width: 40%;
 }
+
 details:hover {
     background-color: rgb(48, 46, 46);
 }
+
 details > p{
     background-color: rgb(32, 32, 32);
     border: none;
     margin: 0px;
 }
+
 details > p:hover {
     background-color: rgb(48, 46, 46);
 }
+
 .last {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
-
-/*title*/
+ 
 h1 {
 	height: var(--h);
 	line-height: var(--h);
@@ -92,8 +109,7 @@ h1 {
     font-size: 60px;
     margin: 30px auto 100px auto;
 }
-
-/*article*/
+ 
 article {
     border: 2px solid var(--c);
     border-radius: 10px;
@@ -102,16 +118,17 @@ article {
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
+
 article > div > p {
     font-size: 40px;
     margin: 10px;
 }
+
 article > img {
     border-radius: 10px;
     margin: 10px;
 }
-
-/*footer*/
+ 
 footer {
     background-color: var(--c);
     height: 300px;
@@ -121,19 +138,20 @@ footer > div {
 	flex-flow: row wrap;
     flex-direction: row-reverse;
 }
+
 .ft {
     direction: ltr;
     padding: 15px 20px;
     font-size: 35px;
 }
+
 .ftp {
     direction: rtl;
     padding: 15px 20px;
 	justify-content: space-between;
     font-size: 45px;
 }
-
-/*about*/
+ 
 .ab {
 	height: var(--h);
 	line-height: var(--h);
@@ -141,14 +159,14 @@ footer > div {
     font-size: 60px;
     margin: 50px auto 0px auto;
 }
+
 .iab {
     margin: 30px auto;
     display: block; 
     height: 200px;
     width: 200px;
 }
-
-/*...*/
+ 
 .s {
     height: var(--h);
     line-height: var(--h);
@@ -157,3 +175,4 @@ footer > div {
     margin-right: 30px;
     margin-top: 0px;
 }
+*/

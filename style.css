@@ -48,29 +48,33 @@ a {
     text-decoration-line: none;
 }
 
-@media screen and (max-width: 1024px) {
-
-    .logo {
-        height: calc(var(--h)*var(--m));
-        line-height: calc(var(--h)*var(--m));
-        font-size: calc(var(--f)*var(--m));
-        font-weight:bold;
-        margin-right: 30px;
-        margin-top: 0px;
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 
-    header {
-        background-color: var(--c);
-        height: calc(var(--h)*var(--m));
+    .logo {
+        font-size: calc(var(--f) * 0.8);
+        line-height: normal;
+        margin: 10px 0;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     li a {
-        display: block;
-        font-size: calc(var(--h)*var(--m)*0.8) ;
-        padding: 15px 20px;
+        font-size: calc(var(--f) * 0.6);
+        padding: 10px;
+        text-align: center;
+        width: 100%;
     }
-    
 }
+
 
 /*
  

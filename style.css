@@ -6,42 +6,32 @@
 mediatypes ( all screen print )
 */
 
+:root {
+    --h:150px;
+    --f:50px;
+    --c:rgb(9, 212, 87);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     direction: rtl;
     font-family: Arial, Helvetica, sans-serif;
-    /*border: 1px solid red;*/
-}
-/*
-@media not|only mediatypes and (expressions) {
-    CSS-Code
-}*/
-
-:root {
-    --h:150px;
-    --c:rgb(9, 212, 87);
-    --h0:75px;
-}
-
-a {
-    color: #000;
-    text-decoration-line: none;
-}
-
-header {
-    background-color: var(--c);
-    height: var(--h);
 }
 
 .logo {
     height: var(--h);
     line-height: var(--h);
-    font-size: 50px;
+    font-size: var(--f);
     font-weight:bold;
     margin-right: 30px;
     margin-top: 0px;
+}
+
+header {
+    background-color: var(--c);
+    height: var(--h);
 }
  
 ul {
@@ -52,8 +42,37 @@ ul {
 
 li a {
     display: block;
-    font-size: 40px;
+    font-size: calc(var(--f)*0.8);
     padding: 15px 20px;
+}
+
+a {
+    color: #000;
+    text-decoration-line: none;
+}
+
+@media screen and (max-width: 400px) {
+
+    .logo {
+        height: calc((--h)*2);
+        line-height: calc((--h)*2);
+        font-size: calc((--f)*2);
+        font-weight:bold;
+        margin-right: 30px;
+        margin-top: 0px;
+    }
+
+    header {
+        background-color: var(--c);
+        height: calc((--h)*2);
+    }
+
+    li a {
+        display: block;
+        font-size: calc(var(--f)*0.8*2) ;
+        padding: 15px 20px;
+    }
+    
 }
 
 /*

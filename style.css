@@ -9,6 +9,7 @@ mediatypes ( all screen print )
 :root {
     --h:150px;
     --f:50px;
+    --m:4;
     --c:rgb(9, 212, 87);
 }
 
@@ -19,7 +20,6 @@ mediatypes ( all screen print )
     direction: rtl;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .logo {
     height: var(--h);
     line-height: var(--h);
@@ -28,18 +28,15 @@ mediatypes ( all screen print )
     margin-right: 30px;
     margin-top: 0px;
 }
-
 header {
     background-color: var(--c);
     height: var(--h);
 }
- 
 ul {
     list-style-type: none;
     display: flex;
 	flex-flow: row wrap;
 }
-
 li a {
     display: block;
     font-size: calc(var(--f)*0.8);
@@ -54,9 +51,9 @@ a {
 @media screen and (max-width: 400px) {
 
     .logo {
-        height: calc((--h)*2);
-        line-height: calc((--h)*2);
-        font-size: calc((--f)*2);
+        height: calc(var(--h)*var(--m));
+        line-height: calc(var(--h)*var(--m));
+        font-size: calc(var(--f)*var(--m));
         font-weight:bold;
         margin-right: 30px;
         margin-top: 0px;
@@ -64,12 +61,12 @@ a {
 
     header {
         background-color: var(--c);
-        height: calc((--h)*2);
+        height: calc(var(--h)*var(--m));
     }
 
     li a {
         display: block;
-        font-size: calc(var(--f)*0.8*2) ;
+        font-size: calc(var(--h)*var(--m)*0.8) ;
         padding: 15px 20px;
     }
     
